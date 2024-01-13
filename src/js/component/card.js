@@ -4,6 +4,7 @@ const Card = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
+    
     const fetchCharacters = async () => {
       try {
         const response = await fetch('https://swapi.dev/api/people/');
@@ -41,11 +42,11 @@ const Card = () => {
                 <p className="card-text">Height: {character.height}</p>
                 <p className="card-text">Gender: {character.gender}</p>
                 {/* Add more details if necessary */}
+                  {/* <Link to="/character">
+					<button className="btn btn-primary">Ficha personaje</button>
+				</Link>  */}
                 <a href="#" className="btn btn-success">
-			    Entrar a Ficha 
-		        </a>
-                <a href="#" className="btn btn-success">
-			    Favoritos
+			    Agregar a favoritos
 		        </a>
               </div>
             </div>
